@@ -351,8 +351,6 @@ public class SquarePool
         {
             return;
         }
-        int currentIndex = m_BlankPoint.row * m_GridSize + m_BlankPoint.col;
-        int targetIndex = target.row * m_GridSize + target.col;
 
         (At(m_BlankPoint).CurrentPoint, At(target).CurrentPoint) = (At(target).CurrentPoint, At(m_BlankPoint).CurrentPoint);
         m_BlankPoint = target;
