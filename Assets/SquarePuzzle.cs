@@ -306,10 +306,10 @@ public class SquarePool
         int MainSize = sizeLess - (sizeLess % m_GridSize);
         int SepSize  = sizeLess / m_GridSize;
 
-        int leftTopX = (texture.width - MainSize) / 2;
-        int leftTopY = (texture.height - MainSize) / 2;
+        int leftBottomX = (texture.width - MainSize) / 2;
+        int leftBottomY = (texture.height - MainSize) / 2;
 
-        Texture2D MainTexture = texture.CropTexture(new Rect(leftTopX, leftTopY, MainSize, MainSize));
+        Texture2D MainTexture = texture.CropTexture(new Rect(leftBottomX, leftBottomY, MainSize, MainSize));
 
         int index = 0;
         for (int i = 0; i < m_GridSize; i++)
